@@ -10,7 +10,7 @@ sbatch <<EOT
 cd /scratch/dm4524/ai4ce/multi-agent-perception/det/
 source /scratch/dm4524/env.sh
 export PYTHONPATH="${PYTHONPATH}:/scratch/dm4524/ai4ce/multi-agent-perception/det/nuscenes-devkit/python-sdk"
-make create_data from_agent=$1 to_agent=$2 scene_begin=$3 scene_end=$4 split=test
+make create_data from_agent=$1 to_agent=$2 scene_begin=$3 scene_end=$4 split=val
 EOT
 
 
