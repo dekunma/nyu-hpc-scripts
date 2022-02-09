@@ -4,7 +4,7 @@ echo make $2
 sbatch <<EOT
 #!/bin/bash
 #SBATCH --cpus-per-task=4              
-#SBATCH --time=21:00:00                 
+#SBATCH --time=24:00:00                 
 #SBATCH --mem=16GB
 #SBATCH --job-name=s_$1
 #SBATCH --output=results/train/s_$1.out
