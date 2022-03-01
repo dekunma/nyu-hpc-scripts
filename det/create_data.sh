@@ -1,8 +1,8 @@
 #!/bin/bash
 sbatch <<EOT
 #!/bin/bash
-#SBATCH --cpus-per-task=4                # uses 2 compute cores per task
-#SBATCH --time=6:00:00                  # for one hour
+#SBATCH --cpus-per-task=2               
+#SBATCH --time=2:00:00                  
 #SBATCH --mem=16GB
 #SBATCH --job-name=d_$1_$3
 #SBATCH --output=results/create/create_$1_$3.out

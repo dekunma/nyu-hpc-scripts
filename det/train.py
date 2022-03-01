@@ -1,10 +1,10 @@
 import os
 
 tasks = (
-    ('l', 'train_lowerbound'),
-    ('l_nc', 'train_lowerbound_nc'),
-    ('u', 'train_upperbound'),
-    ('u_nc', 'train_upperbound_nc'),
+    ('l', 'train_bound bound=lowerbound'),
+    ('l_nc', 'train_bound_nc bound=lowerbound'),
+    ('u', 'train_bound bound=upperbound'),
+    ('u_nc', 'train_bound_nc bound=upperbound'),
     ('v', 'train com=v2v'),
     ('v_nc', 'train_nc com=v2v'),
     ('w', 'train com=when2com'),
@@ -14,4 +14,4 @@ tasks = (
 )
 
 for t in tasks:
-    os.system(f'source ./train.sh {t[0]} {t[1]}')
+    os.system(f'source ./train.sh {t[0]} \'{t[1]}\'')

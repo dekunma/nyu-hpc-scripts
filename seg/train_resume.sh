@@ -3,11 +3,11 @@ echo make $2
 
 sbatch <<EOT
 #!/bin/bash
-#SBATCH --cpus-per-task=4              
-#SBATCH --time=24:00:00                 
+#SBATCH --cpus-per-task=2        
+#SBATCH --time=8:00:00                 
 #SBATCH --mem=16GB
-#SBATCH --job-name=s_$1
-#SBATCH --output=results/train/s_$1.out
+#SBATCH --job-name=s_$1_8
+#SBATCH --output=results/train8/s_$1.out
 #SBATCH --gres=gpu:rtx8000:1
 
 cd /scratch/dm4524/ai4ce/multi-agent-perception/seg/
